@@ -161,6 +161,86 @@
     }
 })
 
+.state('storeoperations', {
+    url: "/store-operations.html",
+    templateUrl: "views/operations/store-operations.html",
+    data: {
+        pageTitle: 'Operations',
+        pageSubTitle: 'Store Operations'
+    },
+    resolve: {
+        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+                name: 'MetronicApp',
+                insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                files: [
+                    'controllers/OperationController.js'
+                ]
+            });
+        }]
+    }
+})
+
+.state('storetransactions', {
+    url: "/store-transactions.html",
+    templateUrl: "views/operations/store-transactions.html",
+    data: {
+        pageTitle: 'Operations',
+        pageSubTitle: 'Store Transactions'
+    },
+    resolve: {
+        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+                name: 'MetronicApp',
+                insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                files: [
+                    'controllers/OperationController.js'
+                ]
+            });
+        }]
+    }
+})
+
+.state('transactiongenerator', {
+    url: "/transaction-generator.html",
+    templateUrl: "views/operations/transaction-generator.html",
+    data: {
+        pageTitle: 'Operations',
+        pageSubTitle: 'Transactions Generator'
+    },
+    resolve: {
+        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+                name: 'MetronicApp',
+                insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                files: [
+                    'controllers/OperationController.js'
+                ]
+            });
+        }]
+    }
+})
+
+.state('viewtransactions', {
+    url: "/view-transactions.html",
+    templateUrl: "views/operations/view-transactions.html",
+    data: {
+        pageTitle: 'Operations',
+        pageSubTitle: 'View Transactions'
+    },
+    resolve: {
+        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+                name: 'MetronicApp',
+                insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                files: [
+                    'controllers/OperationController.js'
+                ]
+            });
+        }]
+    }
+})
+
 .state('runanalysis', {
     url: "/run-analysis.html",
     templateUrl: "views/analysis/run-analysis.html",
@@ -174,7 +254,7 @@
                 name: 'MetronicApp',
                 insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                 files: [
-                    'controllers/StoreCategoriesController.js'
+                    'controllers/AnalysisController.js'
                 ]
             });
         }]
