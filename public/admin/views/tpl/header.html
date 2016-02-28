@@ -1,244 +1,130 @@
 <div ng-controller="HeaderController">
 
-    <div class="page-header-top fixed">
-        <div class="container-fluid">
-            <div class="page-logo">
+  <div class="page-header-top fixed">
+    <div class="container-fluid">
+      <div class="page-logo">
 
-                <a href="#/dashboard.html" style="text-decoration:none;"><h2 class="font-green-haze bold uppercase">B-Forecaster</h2></a>
-            </div>
+        <a href="#/dashboard.html" style="text-decoration:none;"><h2 class="font-green-haze bold uppercase">B-Forecaster</h2></a>
+      </div>
 
-            <span data-ng-include="'views/tpl/page-head.html'" data-ng-controller="PageHeadController" class="page-head" style="position: fixed; z-index: 9;background: rgb(68, 77, 88) none repeat scroll 0% 0% ! important;">
+      <span data-ng-include="'views/tpl/page-head.html'" data-ng-controller="PageHeadController" class="page-head" style="position: fixed; z-index: 9;background: rgb(68, 77, 88) none repeat scroll 0% 0% ! important;">
             </span>
 
 
 
 
-            <a href="javascript:;" class="menu-toggler"></a>
-            <div class="top-menu">
-                <ul class="nav navbar-nav pull-right">
+      <a href="javascript:;" class="menu-toggler"></a>
+      <div class="top-menu">
+        <ul class="nav navbar-nav pull-right">
 
-                    <li class="dropdown dropdown-user dropdown-dark">
-                        <a href="javascript;" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
-                            <span class="username username-hide-mobile" style="color:#AEEB91" >Admin</span>
-                             <img alt="" class="img-circle" src="assets/images/admin.png">
+          <li class="dropdown dropdown-user dropdown-dark">
+            <a href="javascript;" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
+              <span class="username username-hide-mobile" style="color:#AEEB91">Admin</span>
+              <img alt="" class="img-circle" src="assets/images/admin.png">
 
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="#" ng-click="logout()">
-                                    <i class="fa fa-sign-out" style="color:#F3565D"></i> Log Out </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END USER LOGIN DROPDOWN -->
-                </ul>
-            </div>
-            <!-- END TOP NAVIGATION MENU -->
-        </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-default">
+              <li>
+                <a href="#" ng-click="logout()">
+                  <i class="fa fa-sign-out" style="color:#F3565D"></i> Log Out </a>
+              </li>
+            </ul>
+          </li>
+          <!-- END USER LOGIN DROPDOWN -->
+        </ul>
+      </div>
+      <!-- END TOP NAVIGATION MENU -->
+    </div>
 
-        <!-- END HEADER TOP -->
-        <!-- BEGIN HEADER MENU -->
-        <div class="page-header-menu menu-header-fixed">
-            <div class="container-fluid">
+    <!-- END HEADER TOP -->
+    <!-- BEGIN HEADER MENU -->
+    <div class="page-header-menu menu-header-fixed">
+      <div class="container-fluid">
 
 
-                <div class="hor-menu">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#/dashboard.html">Dashboard </a>
-                        </li>
+        <div class="hor-menu">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#/dashboard.html">Dashboard </a>
+            </li>
 
-                        <li class="menu-dropdown classic-menu-dropdown ">
-                            <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+            <li class="menu-dropdown classic-menu-dropdown ">
+              <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
                                 Stores <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="dropdown-menu pull-left">
+              <ul class="dropdown-menu pull-left">
 
-                              <li>
-                                  <a href="#/store-categories.html">
+                <li>
+                  <a href="#/store-categories.html">
                                      Store categories
                                   </a>
-                              </li>
+                </li>
 
-                                <li>
-                                    <a href="#/add-store.html">
+                <li>
+                  <a href="#/add-store.html">
                                         Add a new store
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#/edit-store.html">
+                </li>
+                <li>
+                  <a href="#/edit-store.html">
                                         Edit a store
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#/remove-store.html">
+                </li>
+                <li>
+                  <a href="#/remove-store.html">
                                         Remove a store
                                     </a>
-                                </li>
-                                <!-- <li>
+                </li>
+                <!-- <li>
                                     <a href="#/view-stores.html">
                                        View all stores
                                     </a>
                                 </li> -->
-                            </ul>
-                        </li>
+              </ul>
+            </li>
 
 
-                        <li class="menu-dropdown classic-menu-dropdown ">
-                            <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+            <li class="menu-dropdown classic-menu-dropdown ">
+              <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
                                 Products <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="dropdown-menu pull-left">
-                                <li>
-                                    <a href="#/add-product.html">
+              <ul class="dropdown-menu pull-left">
+                <li>
+                  <a href="#/add-product.html">
                                         Add a new product
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#/edit-product.html">
+                </li>
+                <li>
+                  <a href="#/edit-product.html">
                                         Edit a product
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#/remove-product.html">
+                </li>
+                <li>
+                  <a href="#/remove-product.html">
                                         Remove a product
                                     </a>
-                                </li>
-                                <!-- <li>
+                </li>
+                <!-- <li>
                                     <a href="#/view-products.html">
                                        View all products
                                     </a>
                                 </li> -->
-                            </ul>
-                        </li>
+              </ul>
+            </li>
 
 
-                        <li class="menu-dropdown classic-menu-dropdown ">
-                            <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+            <li class="menu-dropdown classic-menu-dropdown ">
+              <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
                                 Predictive Analysis <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="dropdown-menu pull-left">
-                                <li>
-                                    <a href="#/run-analysis.html">
+              <ul class="dropdown-menu pull-left">
+                <li>
+                  <a href="#/run-analysis.html">
                                         Run analysis
                                     </a>
-                                </li>
-                            </ul>
-                        </li>
+                </li>
+              </ul>
+            </li>
 
-                    </ul>
-                </div>
-                <!-- END MEGA MENU -->
-                <div class="pull-right" style="display:none">
-                    <div id="morphsearch" class="morphsearch">
-                        <form name="submitForm" class="morphsearch-form" novalidate ng-submit="submit()">
-                            <input type="search" class="morphsearch-input" placeholder="Search" name="query" ng-model=name  ng-keyup="keyPress($event.keyCode)">
-
-
-
-                        </form>
-
-                        <!-- <form class="morphsearch-form">
-                            <input class="morphsearch-input" type="search" placeholder="Search..."/>
-
-                        </form> -->
-                        <div class="morphsearch-content">
-                            <div class="dummy-column">
-                                <h2>Clients</h2>
-                                <div ng-repeat="client in response.client">
-
-                                    <a class="dummy-media-object elements" href="#">
-                                        <!--<img class="round" src="/assets/images/demo1.png" />-->
-                                        <h3> Client Name: {{client.fname}}&nbsp;{{client.lname}} </h3>
-                                        <h5> Client ID: {{client.clientId}} </h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="dummy-column">
-                                <h2>Domain</h2>
-                                <div ng-repeat="domain in response.domain">
-                                    <a class="dummy-media-object elements" href="#">
-
-                                        <h3>{{domain.domainName}}</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="dummy-column">
-                                <h2>Orders</h2>
-                                <div ng-repeat="order in response.order">
-                                    <a class="dummy-media-object elements" ng-href="#/view-orders.html?orderId={{order.orderId}} ">
-
-                                        <h3>{{order.orderId}}</h3>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="dummy-column">
-                                <h2>Invoices</h2>
-                                <div ng-repeat="invoice in response.invoice">
-                                    <a class="dummy-media-object elements" ng-href="#/invoice.html?invoiceId={{invoice.invoiceId}} ">
-
-                                        <h3>{{invoice.invoiceId}}</h3>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div><!-- /morphsearch-content -->
-                        <span class="morphsearch-close"></span>
-                    </div><!-- /morphsearch -->
-                    <div class="overlay"></div>
-                </div>
-            </div>
+          </ul>
         </div>
-        <!-- END HEADER MENU -->
-    </div>
-
-    <script>
-        (function () {
-        var morphSearch = document.getElementById('morphsearch'),
-                input = morphSearch.querySelector('input.morphsearch-input'),
-                ctrlClose = morphSearch.querySelector('span.morphsearch-close'),
-                isOpen = isAnimating = false,
-                toggleSearch = function (evt) {
-
-                if (evt.type.toLowerCase() === 'focus' && isOpen)
-                        return false;
-                        var offsets = morphsearch.getBoundingClientRect();
-                        if (isOpen) {
-                classie.remove(morphSearch, 'open');
-                        if (input.value !== '') {
-                setTimeout(function () {
-                classie.add(morphSearch, 'hideInput');
-                        setTimeout(function () {
-                        classie.remove(morphSearch, 'hideInput');
-                                input.value = '';
-                        }, 300);
-                }, 500);
-                }
-
-                input.blur();
-                }
-                else {
-                classie.add(morphSearch, 'open');
-                }
-                isOpen = !isOpen;
-                };
-                input.addEventListener('focus', toggleSearch);
-                ctrlClose.addEventListener('click', toggleSearch);
-                document.addEventListener('keydown', function (ev) {
-                var keyCode = ev.keyCode || ev.which;
-                        if (keyCode === 27 && isOpen) {
-                toggleSearch(ev);
-                }
-                });
-        })();
-                $(document).on('click', '.elements', function(){
-
-        $('.morphsearch-close').trigger('click');
-        });
-            </script>
-    <script>
-                function goBack() {
-                window.history.back();
-                }
-    </script>
