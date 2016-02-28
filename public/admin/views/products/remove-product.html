@@ -8,7 +8,7 @@
             <div class="input-group col-sm-12 form-inline" style="margin-bottom: 3%;">
               <div class="input-group">
                 <div class="input-group-addon" style="width: 5%;"><i class="fa fa-search"></i></div>
-                <input type="text" class="form-control col-sm-12" placeholder="Filter by store name or address" ng-model="searchStores">
+                <input type="text" class="form-control col-sm-12" placeholder="Filter by product name or description" ng-model="searchProducts">
               </div>
             </div>
           </div>
@@ -54,11 +54,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="product in allProducts| orderBy:sortType:sortReverse | filter:searchStores  | filter : paginate">
+            <tr ng-repeat="product in allProducts| orderBy:sortType:sortReverse | filter:searchProducts">
               <td>{{$index+1}}
                 <td>{{product.productName}}</td>
-                <td>{{product.productPrice}}</td>
                 <td>{{product.productDescription}}</td>
+                <td>{{product.productPrice}}</td>
                 <td>{{product.addedOn | date}}</td>
                 <td><a ng-click="removeProduct(product)"> <span class="glyphicon glyphicon-remove"></span></a></td>
             </tr>
