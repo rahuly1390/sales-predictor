@@ -1,0 +1,75 @@
+<div ng-controller="AddStoreController"  data-ng-init="init()">
+    <!-- BEGIN SEARCH CLIENT FORM -->
+    <div class="row">
+          <div class="col-md-offset-9" style="margin-left: 3%; margin-right: 3%;">
+            <form name="submitForm" novalidate ng-submit="submit()" autocomplete="off">
+                <div role="tabpanel">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+                      <div class="form-group">
+                          <label class="control-label"> Store Category </label>
+                          <select class="form-control" ng-model="session.storeCat">
+                              <option value="">Select a category</option>
+                              <option ng-repeat="cat in storeCategory" value="{{cat.id}}">{{cat.name}}</option>
+                          </select>
+                      </div>
+
+                        <div class="form-group">
+                            <label class="control-label"> Store Name </label>
+                            <span class="error" ng-show="submitForm.sName.$error.required" style="color:red">*</span>
+                            <input type="text" class="form-control" name="sName" ng-model="session.sName" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label"> Store Type </label>
+                            <select class="form-control" ng-model="session.storeTyp">
+                                <option value="">Select a type</option>
+                                <option ng-repeat="type in storeType" value="{{type.id}}">{{type.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Store Address</label>
+                            <textarea class="form-control" name="sAddress" rows="5" ng-model="session.sAddress"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+                          <div class="form-group text-center margin-top-20">
+                              <input type="submit" class="btn btn-danger col-md-offset-3 col-md-6 "  ng-disabled="submitForm.$invalid" value="Add Store" />
+                          </div>
+                      </div>
+
+                    </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- END SEARCH CLIENT FORM -->
+</div>
+<!-- END MAIN CONTENT -->
+
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+<script>
+ function storeFailure()
+    {
+        swal({
+	  title: "Registration Error",
+	  text: "Sorry, E-mail ID exits in our Database already, Please use another E-mail ID for registration !",
+	  confirmButtonClass: 'btn-danger',
+	  confirmButtonText: 'OK'
+	});
+    }
+ function storeSuccess()
+    {
+        swal({
+	  title: "Success",
+	  text: "Store has been added to the database",
+	  confirmButtonClass: 'btn-success',
+	  confirmButtonText: 'OK'
+	});
+    }
+</script>
+<!-- BEGIN MAIN JS & CSS -->

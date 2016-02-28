@@ -1,0 +1,91 @@
+<div ng-controller="RemoveProductController" class="margin-top-10" data-ng-init="init()">
+  <div class="row">
+    <div class="col-md-offset-9" style="margin-left: 3%; margin-right: 3%;">
+
+      <div role="tabpanel">
+        <form>
+          <div class="form-group">
+            <div class="input-group col-sm-12 form-inline" style="margin-bottom: 3%;">
+              <div class="input-group">
+                <div class="input-group-addon" style="width: 5%;"><i class="fa fa-search"></i></div>
+                <input type="text" class="form-control col-sm-12" placeholder="Filter by store name or address" ng-model="searchStores">
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>
+                <a href="#" ng-click="sortType = 'cname';
+                                                          sortReverse = !sortReverse">
+                                  Product Name
+                                  <span ng-show="sortType == 'pname' && !sortReverse" class="fa fa-caret-down"></span>
+                                  <span ng-show="sortType == 'pname' && sortReverse" class="fa fa-caret-up"></span>
+                              </a>
+              </td>
+              <td>
+                <a href="#" ng-click="sortType = 'sname';
+                                                          sortReverse = !sortReverse">
+                                  Product description
+                                  <span ng-show="sortType == 'pDescription' && !sortReverse" class="fa fa-caret-down"></span>
+                                  <span ng-show="sortType == 'pDescription' && sortReverse" class="fa fa-caret-up"></span>
+                              </a>
+              </td>
+              <td>
+                <a href="#" ng-click="sortType = 'sAddress';
+                                                          sortReverse = !sortReverse">
+                                  Product price
+                                  <span ng-show="sortType == 'sAddress' && !sortReverse" class="fa fa-caret-down"></span>
+                                  <span ng-show="sortType == 'sAddress' && sortReverse" class="fa fa-caret-up"></span>
+                              </a>
+              </td>
+              <td>
+                <a href="#" ng-click="sortType = 'created';
+                                                          sortReverse = !sortReverse">
+                                  Created
+                                  <span ng-show="sortType == 'created' && !sortReverse" class="fa fa-caret-down"></span>
+                                  <span ng-show="sortType == 'created' && sortReverse" class="fa fa-caret-up"></span>
+                              </a>
+              </td>
+              <td>Edit</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="product in allProducts| orderBy:sortType:sortReverse | filter:searchStores  | filter : paginate">
+              <td>{{$index+1}}
+                <td>{{product.productName}}</td>
+                <td>{{product.productPrice}}</td>
+                <td>{{product.productDescription}}</td>
+                <td>{{product.addedOn | date}}</td>
+                <td><a ng-click="removeProduct(product)"> <span class="glyphicon glyphicon-remove"></span></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- <div align="center">
+          <pagination total-items="totalItems" ng-model="currentPage" boundary-links="true" items-per-page="numPerPage" class="pagination-sm">
+          </pagination>
+        </div> -->
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+ function removeConfirm()
+    {
+        swal({
+	  title: "Remove confirm",
+	  text: "Do you want to remove this store?",
+	  confirmButtonClass: 'btn-danger',
+	  confirmButtonText: 'OK'
+	});
+    }
+    </script>

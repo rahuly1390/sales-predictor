@@ -1,0 +1,66 @@
+<div ng-controller="AddProductController"  data-ng-init="init()">
+    <!-- BEGIN SEARCH CLIENT FORM -->
+    <div class="row">
+          <div class="col-md-offset-9" style="margin-left: 3%; margin-right: 3%;">
+            <form name="submitForm" novalidate ng-submit="submit()" autocomplete="off">
+                <div role="tabpanel">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+                      <!-- <div class="form-group">
+                          <label class="control-label"> Store </label>
+                          <select class="form-control" ng-model="session.storeId" required>
+                              <option value="">Select a store</option>
+                              <option ng-repeat="store in allStores" value="{{store._id}}">{{store.storeName}}</option>
+                          </select>
+                      </div> -->
+
+                        <div class="form-group">
+                            <label class="control-label"> Product Name </label>
+                            <span class="error" ng-show="submitForm.pName.$error.required" style="color:red">*</span>
+                            <input type="text" class="form-control" name="pName" ng-model="session.pName" required/>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label"> Product Price </label>
+                            <span class="error" ng-show="submitForm.pPrice.$error.required" style="color:red">*</span>
+                            <input type="text" class="form-control" name="pPrice" ng-model="session.pPrice" required/>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Product description</label>
+                            <textarea class="form-control" name="pDescription" rows="5" ng-model="session.pDescription"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+                          <div class="form-group text-center margin-top-20">
+                              <input type="submit" class="btn btn-danger col-md-offset-3 col-md-6 "  ng-disabled="submitForm.$invalid" value="Add Product" />
+                          </div>
+                      </div>
+
+                    </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- END SEARCH CLIENT FORM -->
+</div>
+<!-- END MAIN CONTENT -->
+
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+<script>
+ function productSuccess()
+    {
+        swal({
+	  title: "Success",
+	  text: "Product has been added successfully",
+	  confirmButtonClass: 'btn-success',
+	  confirmButtonText: 'OK'
+	});
+    }
+</script>
+<!-- BEGIN MAIN JS & CSS -->
